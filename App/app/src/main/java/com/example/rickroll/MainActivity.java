@@ -10,7 +10,8 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity 
+{
     EditText userName;
     EditText userEmail;
     EditText userPassword;
@@ -18,7 +19,8 @@ public class MainActivity extends AppCompatActivity {
     Button Create;
     Button AlreadyAccount;
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
+    protected void onCreate(Bundle savedInstanceState) 
+    {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
@@ -29,7 +31,8 @@ public class MainActivity extends AppCompatActivity {
         Create = findViewById(R.id.loginbtl);
         AlreadyAccount = findViewById(R.id.AlreadyAccount);
 
-        Create.setOnClickListener(new View.OnClickListener() {
+        Create.setOnClickListener(new View.OnClickListener() 
+        {
             @Override
             public void onClick(View view) {
                 if(userName.getText().toString().equals("") || userEmail.getText().toString().equals("") || userPassword.getText().toString().equals(""))
@@ -49,9 +52,11 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        AlreadyAccount.setOnClickListener(new View.OnClickListener() {
+        AlreadyAccount.setOnClickListener(new View.OnClickListener() 
+        {
             @Override
-            public void onClick(View view) {
+            public void onClick(View view) 
+            {
                 Toast.makeText(MainActivity.this, "Sorry Service is Not Available || Please Try again ",Toast.LENGTH_SHORT).show();
             }
         });
